@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1772.0000000000002,6105" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -25,6 +25,21 @@
       <x:String>System.Windows.Markup</x:String>
       <x:String>GlobalVariablesNamespace</x:String>
       <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Net</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -52,13 +67,544 @@
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
       <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Net.Primitives</AssemblyReference>
+      <AssemblyReference>System.Net.HttpListener</AssemblyReference>
+      <AssemblyReference>System.Net.WebProxy</AssemblyReference>
+      <AssemblyReference>System.Net.NameResolution</AssemblyReference>
+      <AssemblyReference>System.Net.WebClient</AssemblyReference>
+      <AssemblyReference>System.Net.Requests</AssemblyReference>
+      <AssemblyReference>System.Net.ServicePoint</AssemblyReference>
+      <AssemblyReference>System.Net.WebHeaderCollection</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Prossess" sap:VirtualizedContainerService.HintSize="1216,2198.0000000000005" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="Excel_File" />
+      <Variable x:TypeArguments="x:String" Name="Sheet_Name" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtRange" />
+      <Variable x:TypeArguments="x:Boolean" Name="SiteOpen">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:Boolean" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:Boolean" Name="LoginSuccessful">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:Boolean" Value="True" />
+        </Variable.Default>
+      </Variable>
+    </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
+    <ui:RetryScope DisplayName="Open Browser and Visit URL" sap:VirtualizedContainerService.HintSize="1154,1415" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="3" RetryInterval="00:00:01">
+      <ui:RetryScope.ActivityBody>
+        <ActivityAction>
+          <Sequence DisplayName="Retry 3 Times On Fail" sap:VirtualizedContainerService.HintSize="1112,1123" sap2010:WorkflowViewState.IdRef="Sequence_15">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: New Tab" sap:VirtualizedContainerService.HintSize="1050,1012" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="DebuggerApi" ScopeGuid="9ec755ac-87db-4239-acba-51837ed2cbeb" Version="V2" WindowResize="Maximize">
+              <uix:NApplicationCard.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Login or Register" sap:VirtualizedContainerService.HintSize="1016,794" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:String" Name="RegisterEmail" />
+                      <Variable x:TypeArguments="x:String" Name="RegisterPassword" />
+                      <Variable x:TypeArguments="ss:SecureString" Name="RegisterPasswordSecure" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="954,91" sap2010:WorkflowViewState.IdRef="Delay_2" />
+                    <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="954,83" sap2010:WorkflowViewState.IdRef="NGoToUrl_3" Url="https://cmpg323-ecopowerlogistics.azurewebsites.net/" Version="V3" />
+                    <Assign sap:VirtualizedContainerService.HintSize="954,83" sap2010:WorkflowViewState.IdRef="Assign_5">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:Boolean">[SiteOpen]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <uix:NCheckState DisplayName="Check App State 'Login'" sap:VirtualizedContainerService.HintSize="954,302" sap2010:WorkflowViewState.IdRef="NCheckState_6" ScopeIdentifier="9ec755ac-87db-4239-acba-51837ed2cbeb" Version="V3">
+                      <uix:NCheckState.IfExists>
+                        <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,83" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Login'" sap:VirtualizedContainerService.HintSize="954,53" sap2010:WorkflowViewState.IdRef="NClick_13" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9ec755ac-87db-4239-acba-51837ed2cbeb" Version="V3">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="https://cmpg323-ecopowerlogistics.azurewebsites.net/Identity/Account/Login" CvTextArea="1568, 105, 40, 19" CvTextArgument="Login" CvType="Text" DesignTimeRectangle="1561, 93, 55, 40" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Login'" FullSelectorArgument="&lt;webctrl aaname='Login' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Login' tag='A' type='' class='nav-link text-dark' check:innerText='Login' /&gt;" Guid="a69867c9-798f-4af6-886a-3a7534fded0f" InformativeScreenshot="e9cc25b29cc9bdfbcd44cb5881fe5703.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Log in - EcoPower_Logistics' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                            </uix:NClick.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </uix:NClick>
+                          <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="954,91" sap2010:WorkflowViewState.IdRef="Delay_3" />
+                          <Sequence DisplayName="Email and Password" sap:VirtualizedContainerService.HintSize="954,83" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="434,53" sap2010:WorkflowViewState.IdRef="InputDialog_8" IsPassword="False" Label="Email" Title="Input a email">
+                              <ui:InputDialog.Result>
+                                <OutArgument x:TypeArguments="x:String">[RegisterEmail]</OutArgument>
+                              </ui:InputDialog.Result>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:InputDialog>
+                            <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="434,53" sap2010:WorkflowViewState.IdRef="InputDialog_9" IsPassword="False" Label="Password" Title="Input Password">
+                              <ui:InputDialog.Result>
+                                <OutArgument x:TypeArguments="x:String">[RegisterPassword]</OutArgument>
+                              </ui:InputDialog.Result>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:InputDialog>
+                            <Assign sap:VirtualizedContainerService.HintSize="434,83" sap2010:WorkflowViewState.IdRef="Assign_4">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="ss:SecureString">[RegisterPasswordSecure]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="ss:SecureString">[new System.Net.NetworkCredential("", RegisterPassword).SecurePassword]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                          </Sequence>
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Email'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="954,53" sap2010:WorkflowViewState.IdRef="NTypeInto_9" ScopeIdentifier="9ec755ac-87db-4239-acba-51837ed2cbeb" Text="[RegisterEmail]" Version="V3">
+                            <uix:NTypeInto.Target>
+                              <uix:TargetAnchorable BrowserURL="https://cmpg323-ecopowerlogistics.azurewebsites.net/Identity/Account/Login" CvElementArea="318, 322, 419, 60" CvTextArea="332, 335, 33, 13" CvTextArgument="Email" CvType="InputBox" DesignTimeRectangle="320, 324, 416, 58" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT Input_Email'" FullSelectorArgument="&lt;webctrl id='Input_Email' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='Input_Email' tag='INPUT' type='email' class='form-control' aaname='Email' /&gt;" Guid="6f123d77-1307-42fb-b7d5-7aec9e24c970" InformativeScreenshot="24e50438d19cfbdde9d0cffef1e67d66.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Log in - EcoPower_Logistics' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <uix:Target CvTextArea="332, 335, 33, 13" CvTextArgument="Email" CvType="Text" DesignTimeRectangle="322, 317, 54, 49" ElementType="Text" FriendlyName="'Email'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='form-label' aaname='Email' check:innerText='Email' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADoAAAA1CAYAAAAQ7fj9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFMSURBVGhD7ZTBSgJRFIbvEweBDyDSOqSVhKuIIMJN+gBFi2pTBrVJaeFCkxBaTAWDceK/eeMkEmVS4+//wWHunbl35nxzzkywFUGibEiUDYmyIVE2oujT84vd9frWvunYxfUtZQRIQvBh9Gjj8Wu0ZySgkpBkJ6CazJVMBPTvKiBRNiTKhkTZkCgbc4seNlu2tl76FJ1ud3J1MZyendvO7p7leR4D43mf8StRJPJXSPSbLFw0JXTZvrLN6lZsaaxN5zEvVzZscD+c7Hhv0VmfAI7Yg73/KuqTg1SWZR8JpTkCYy+HvQiA9UfHJ/EI/HdZGNGvKuoT8mLAC0yDl1HbrscXtHSiWOfXTotiPqs7qET9GNBWFOd9W2NeuIr6dkMgyZ+Kpp9Vusf+QaNYFV02JMqGRNmQKBsSZUOibEiUDYmyIVE2JMqGRLkwewNxeiOjmw4d9QAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, CV" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NTypeInto.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </uix:NTypeInto>
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="954,53" sap2010:WorkflowViewState.IdRef="NTypeInto_10" IsPassword="True" ScopeIdentifier="9ec755ac-87db-4239-acba-51837ed2cbeb" SecureText="[RegisterPasswordSecure]" Version="V3">
+                            <uix:NTypeInto.Target>
+                              <uix:TargetAnchorable BrowserURL="https://cmpg323-ecopowerlogistics.azurewebsites.net/Identity/Account/Login" CvElementArea="318, 381, 419, 60" CvTextArea="333, 393, 56, 13" CvTextArgument="Password" CvType="InputBox" DesignTimeRectangle="320, 382, 416, 58" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FriendlyName="'INPUT Input_Password'" FullSelectorArgument="&lt;webctrl id='Input_Password' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='Input_Password' tag='INPUT' type='password' class='form-control' aaname='Password' /&gt;" Guid="840a7d2b-42db-4b41-a606-0d58ba6423cd" InformativeScreenshot="0b86a12a4d0376536e917e1648a79162.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Log in - EcoPower_Logistics' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <uix:Target CvTextArea="333, 393, 56, 13" CvTextArgument="Password" CvType="Text" DesignTimeRectangle="322, 375, 78, 49" ElementType="Text" FriendlyName="'Password'" FullSelectorArgument="&lt;webctrl aaname='Password' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Password' tag='LABEL' type='' class='form-label' check:innerText='Password' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFIAAAA1CAYAAADS3bx5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJySURBVHhe7ZZNaxRBFEXnFwuCP0DErZ+rEF2JCCJu1JUomGShbsSFbkxw4UIziIyLUWGItJym7/BsOsbpXHEG7oFOV9erel11uqomk1dv3jXh9ESkiYg0EZEmItLE5PXb/ebo6Gf3GMYyef/hY/P5y9fuMYxl8u37j4ZVicyszPFM+INMViZCOTNzrX5FpOnK1jaRHxsT+ffHRP4hNxGRJiLSRESaiEgTEWkiIk1EpImINDFa5IOHj5ozZ88tr8tXrzfz+byLbibM6fmLl93TapxKZH0p5U2XuRYiF4tFc/fe/ebT4bSr2TzWQiQrcWv7ZiuSMqtT2/7W7TutaCB+/sLFZWz/4KCtJ5fq6Dubzdp+igPv5BL00TPt1J+rtiNGLj40saF3Kv7fRVKWMAaqwUoqz8SqHGKH02krl4+gY4E6ylWU8tTjg5jexcfRbtB7ND7iVSDU8YLa1Dmtgu3Hpg6qj6T3JygQcOnKtaUIwTOrhH6UyaPjA5nk4q78FcRoTLUMGkcVC0N5/hbbiqxooFW02tYYOQRytOU1QSTpuKA/9dxVpv9xUuijVU6siqx5K2slcmhix7WlnqvCJHUUAPFnO3vtnRiTZ1VSp5xD+dWO8fRFDo1RdWsjsv+1JYa2lHd299p6oI48TEiT6k+SO9v+8ZOn7TNxBG1t31i+gzYnnZFVJPDeWkebunNW5Z9sbeq1pZGoSWmCimkiCKi/5DVvf4VCXwJIxFCOIZFAHrWn/Kc5ncRokeF3ItJERJqISBMRaSIiTUSkiYg0EZEmItJERJqISBMRaSIiTUSkiYg0EZEmItJERJqISBMRaaFpfgHx/Vv8hPZ9VQAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, CV" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NTypeInto.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </uix:NTypeInto>
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Log in'" sap:VirtualizedContainerService.HintSize="954,53" sap2010:WorkflowViewState.IdRef="NClick_15" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9ec755ac-87db-4239-acba-51837ed2cbeb" Version="V3">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="https://cmpg323-ecopowerlogistics.azurewebsites.net/Identity/Account/Login" CvElementArea="319, 470, 418, 51" CvTextArea="500, 486, 57, 22" CvTextArgument="Log in" CvType="Button" DesignTimeRectangle="320, 472, 416, 48" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Log in'" FullSelectorArgument="&lt;webctrl id='login-submit' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='login-submit' tag='BUTTON' type='submit' class='w-100 btn btn-lg btn-primary' aaname='Log in' check:innerText='Log in' /&gt;" Guid="5aa8dcc4-e959-4b4b-887b-bbd9003b50bc" InformativeScreenshot="13f08e939147eb34c9fe6e8b45782741.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Log in - EcoPower_Logistics' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                            </uix:NClick.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </uix:NClick>
+                          <uix:NCheckState DisplayName="Check App State 'Invalid login attempt.'" sap:VirtualizedContainerService.HintSize="954,325" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="9ec755ac-87db-4239-acba-51837ed2cbeb" Version="V3">
+                            <uix:NCheckState.IfExists>
+                              <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,83" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Register'" sap:VirtualizedContainerService.HintSize="1000,53" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9ec755ac-87db-4239-acba-51837ed2cbeb" Version="V3">
+                                  <uix:NClick.Target>
+                                    <uix:TargetAnchorable BrowserURL="https://cmpg323-ecopowerlogistics.azurewebsites.net/" CvTextArea="1487, 105, 59, 19" CvTextArgument="Register" CvType="Text" DesignTimeRectangle="1479, 93, 73, 40" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Register'" FullSelectorArgument="&lt;webctrl aaname='Register' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Register' tag='A' type='' class='nav-link text-dark' check:innerText='Register' /&gt;" Guid="5d9bcdaa-b0b6-4d4a-bcaa-ef2142374bb7" InformativeScreenshot="01e4e1de45a367412ab00cab5adde72d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Home Page - EcoPower_Logistics' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                                  </uix:NClick.Target>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </uix:NClick>
+                                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Email'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1000,53" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="9ec755ac-87db-4239-acba-51837ed2cbeb" Text="[RegisterEmail]" Version="V3">
+                                  <uix:NTypeInto.Target>
+                                    <uix:TargetAnchorable BrowserURL="https://cmpg323-ecopowerlogistics.azurewebsites.net/Identity/Account/Register" CvElementArea="319, 283, 419, 61" CvTextArea="333, 296, 32, 13" CvTextArgument="Email" CvType="InputBox" DesignTimeRectangle="320, 285, 416, 58" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT Input_Email'" FullSelectorArgument="&lt;webctrl id='Input_Email' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='Input_Email' tag='INPUT' type='email' class='form-control' aaname='Email' /&gt;" Guid="3ef26ab4-d87b-4bd9-b9b4-61a76598d540" InformativeScreenshot="4cf2b46fd4d4fda1c671a3afa160b13f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Register - EcoPower_Logistics' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                                      <uix:TargetAnchorable.Anchors>
+                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                          <uix:Target CvTextArea="333, 296, 32, 13" CvTextArgument="Email" CvType="Text" DesignTimeRectangle="322, 279, 54, 49" ElementType="Text" FriendlyName="'Email'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname='Email' check:innerText='Email' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADoAAAA1CAYAAAAQ7fj9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFNSURBVGhD7ZTNSsNAFIXniQtCH0DEtRRXIq5EBBE36gNUXFg3WkE3trhw4Q8idJFaCC1XztiRaylif6jpyfngkplkJrlf7k2ClQSJsiFRNiTKRrlEux89e3h8suZdy65u7ykjQBKCb+8d6/cH0Z6RgEpCkp2AajJXMhHQv2VAomxIlA2JsiFRNqYWPT45tcpK9Ue02u3h1flw0bi03b19y/M8BsbTPmMmUSSyKCT6R+YumhK6bt7YRm0ztjTWpvOYr66t2/PL63DHV4uO+wRwxB7s/VdRnxyksiz7TijNERh7OexFAKyvn53HI/DfZWFEf6uoT8iLAS8wCl7G1vZOfEFLJ4p1fu2oKObjuoNK1I8BbUVx3rc15oWrqG83BJKcVDT9rNI9Dg6PilXRZUOibEiUDYmyIVE2JMqGRNmQKBsSZUOibEiUjZKImn0CT08jIsQ/V2gAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, CV" />
+                                        </scg:List>
+                                      </uix:TargetAnchorable.Anchors>
+                                    </uix:TargetAnchorable>
+                                  </uix:NTypeInto.Target>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </uix:NTypeInto>
+                                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1000,53" sap2010:WorkflowViewState.IdRef="NTypeInto_2" IsPassword="True" ScopeIdentifier="9ec755ac-87db-4239-acba-51837ed2cbeb" SecureText="[RegisterPasswordSecure]" Version="V3">
+                                  <uix:NTypeInto.Target>
+                                    <uix:TargetAnchorable BrowserURL="https://cmpg323-ecopowerlogistics.azurewebsites.net/Identity/Account/Register" CvElementArea="319, 343, 418, 59" CvTextArea="333, 354, 57, 13" CvTextArgument="Password" CvType="InputBox" DesignTimeRectangle="320, 343, 416, 58" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FriendlyName="'INPUT Input_Password'" FullSelectorArgument="&lt;webctrl id='Input_Password' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='Input_Password' tag='INPUT' type='password' class='form-control' aaname='Password' /&gt;" Guid="3d1f4f12-54c9-4156-91fa-81bb9ca5086d" InformativeScreenshot="4d97c94ea72ddc8abd43aa5cf031b2e2.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Register - EcoPower_Logistics' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                                      <uix:TargetAnchorable.Anchors>
+                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                          <uix:Target CvTextArea="333, 354, 57, 13" CvTextArgument="Password" CvType="Text" DesignTimeRectangle="322, 337, 78, 49" ElementType="Text" FriendlyName="'Password'" FullSelectorArgument="&lt;webctrl aaname='Password' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Password' tag='LABEL' type='' class='' check:innerText='Password' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFIAAAA1CAYAAADS3bx5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJySURBVHhe7ZZNaxRBFEXnFwuCP0DErZ+rEF2JCCJu1JUomGShbsSFbkxw4UIziIyLUWGItJym7/BsOsbpXHEG7oFOV9erel11uqomk1dv3jXh9ESkiYg0EZEmJq/f7jdHRz+7xzCWyfsPH5vPX752j2Esk2/ffzSsSmRmZY5nwh9ksjIRypmZa/UrIk1XtraJ/NiYyL8/JvIPuYmINBGRJiLSRESaiEgTEWkiIk1EpInRIh88fNScOXtueV2+er2Zz+dddDNhTs9fvOyeVuNUIutLKW+6zLUQuVgsmrv37jefDqddzeaxFiJZiVvbN1uRlFmd2va3bt9pRQPx8xcuLmP7BwdtPblUR9/ZbNb2Uxx4J5egj55pp/5ctR0xcvGhiQ29U/H/LpKyhDFQDVZSeSZW5RA7nE5buXwEHQvUUa6ilKceH8T0Lj6OdoPeo/ERrwKhjhfUps5pFWw/NnVQfSS9P0GBgEtXri1FCJ5ZJfSjTB4dH8gkF3flryBGY6pl0DiqWBjK87fYVmRFA62i1bbGyCGQoy2vCSJJxwX9qeeuMv2Pk0IfrXJiVWTNW1krkUMTO64t9VwVJqmjAIg/29lr78SYPKuSOuUcyq92jKcvcmiMqlsbkf2vLTG0pbyzu9fWA3XkYUKaVH+S3Nn2j588bZ+JI2hr+8byHbQ56YysIoH31jra1J2zKv9ka1OvLY1ETUoTVEwTQUD9Ja95+ysU+hJAIoZyDIkE8qg95T/N6SRGiwy/E5EmItJERJqISBMRaSIiTUSkiYg0EZEmItJERJqISBMRaSIiTUSkiYg0EZEmItJERJqISBMRaaFpfgGID1v8aws3sgAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, CV" />
+                                        </scg:List>
+                                      </uix:TargetAnchorable.Anchors>
+                                    </uix:TargetAnchorable>
+                                  </uix:NTypeInto.Target>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </uix:NTypeInto>
+                                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Confirm password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1000,53" sap2010:WorkflowViewState.IdRef="NTypeInto_3" IsPassword="True" ScopeIdentifier="9ec755ac-87db-4239-acba-51837ed2cbeb" SecureText="[RegisterPasswordSecure]" Version="V3">
+                                  <uix:NTypeInto.Target>
+                                    <uix:TargetAnchorable BrowserURL="https://cmpg323-ecopowerlogistics.azurewebsites.net/Identity/Account/Register" CvElementArea="320, 401, 416, 57" CvTextArea="332, 412, 110, 16" CvTextArgument="Confirm password" CvType="InputBox" DesignTimeRectangle="320, 401, 416, 58" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FriendlyName="'INPUT Input_ConfirmPass…'" FullSelectorArgument="&lt;webctrl id='Input_ConfirmPassword' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='Input_ConfirmPassword' tag='INPUT' type='password' class='form-control' aaname='Confirm password' /&gt;" Guid="06698280-d99c-4e6b-b798-36af83c3e6c9" InformativeScreenshot="d1282cf3de621d62b379468d55df31c9.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Register - EcoPower_Logistics' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                                      <uix:TargetAnchorable.Anchors>
+                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                          <uix:Target CvTextArea="332, 412, 110, 16" CvTextArgument="Confirm password" CvType="Text" DesignTimeRectangle="322, 395, 131, 49" ElementType="Text" FriendlyName="'Confirm password'" FullSelectorArgument="&lt;webctrl aaname='Confirm password' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Confirm password' tag='LABEL' type='' class='' check:innerText='Confirm password' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIcAAAA1CAYAAABr5fh0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOCSURBVHhe7ZhNaxRBEIb3FwuCP0DEq5+nED2JCCJe1JMoGHNQLxrBKJjgYf1GJB6igRAZ9xn2TYqia+Nmkyzo+8A4091V1VXd70xvHDx/9bYzpoXFYUosDlNicZiSwcrqWrez83vcNGaPwbvhp+7b9x/jpjF7DH7+2ur4eiAQf0FMZMA/CIQvCCLhN4gvX1wWh6/y8rFiSvyD1JT4T1lT4v8EMyUWhymxOEyJxWFKLA5TYnGYEovDlFgcpsTiMCUzi+PO3XvdiZOndi/ah8Xa+nof8/zFy93S0nJ37fqNbnt7ezxq9uPzl6/dwuLVbnNzc9wzHQcWBxOyaVkMS4+XD5xMhBgURoHmYMxFHLy9vMVPnj4b9xw+sxZm5iSOv51Ux0LryGEMgT0aHRd5vOUne4Spr4p847j6Tp852+cZY+WvnJDYV1+/6e+yx1fknOKLQVz1xxz5skb7WAOQ37kLl/o7qC618ZG/Ygieb9663cdTrXlO1uLYxZGLbIGNkgZtgArUYquNHfb0qx0Li3NqEeJm53jcacuGeHEjIsot5pvt43HJXMxPO+YFw+Gwf2Ze5UKbfuxbmx/XgA3Hnj7NAapZ68N4zDePq6YYY1qOTBxxcUT0a8WIPhQ9SRxxkSHHYyxuLv2MY5epxlo1QJwfn9YG4MuVoU/z3H/wsH+7ZcdcXFU+jEXbGB/bWD/kNZyWIzlWquKiX6sYitVm5DmiPX3aHJHjYUNb/lVOUI1ps4C5eFN507niW4tf7gPqoT/mpU0lL+4bGxv9OHe+Gvi36oNYYxZHbgP+k/ZpP2b6QdpaaEGiWlhBsvpsxkJF9MmFRfvW4uV42NCW/6ScqzHlk3NpzQ+0W0cXMZSbYr1YeblbK/PQVr5VPrQlAHz1DLl+oO/YjxVg4nheCp3NjMc3SQXLvlXMvMUR/bHTwubYtFUbm6o8lNf7Dx/74yLay5+LF2Rh8cquH+O042azDnFjudPGFrI4iEVOGmce5pyLOEAJ61ObxUKik8bigsO8xcGGssDk2hK26uBZ8+caFZ9a1Jc3iBqJoVzzxgrsWrGBsSgOUBxsuSPcuIbTMpM4/hUmCed/xuIYYXG0sThGWBxtLA5TYnGYEovDlFgcpsTiMCUWhymxOEyJxWFKLA5TYnGYEovDlFgcpsTiMCUWhymxOEyJxWFKLA5TYnGYEovDFHTdH/yNLec6Bx6zAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, CV" />
+                                        </scg:List>
+                                      </uix:TargetAnchorable.Anchors>
+                                    </uix:TargetAnchorable>
+                                  </uix:NTypeInto.Target>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </uix:NTypeInto>
+                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Register'" sap:VirtualizedContainerService.HintSize="1000,53" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9ec755ac-87db-4239-acba-51837ed2cbeb" Version="V3">
+                                  <uix:NClick.Target>
+                                    <uix:TargetAnchorable BrowserURL="https://cmpg323-ecopowerlogistics.azurewebsites.net/Identity/Account/Register" CvElementArea="321, 458, 414, 50" CvTextArea="492, 474, 73, 23" CvTextArgument="Register" CvType="Button" DesignTimeRectangle="320, 459, 416, 48" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Register'" FullSelectorArgument="&lt;webctrl id='registerSubmit' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='registerSubmit' tag='BUTTON' type='submit' class='w-100 btn btn-lg btn-primary' aaname='Register' check:innerText='Register' /&gt;" Guid="7151bb70-7e6f-49e9-b974-138de13c7533" InformativeScreenshot="447c5b9c351057dce427499b9e37d72e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Register - EcoPower_Logistics' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                                  </uix:NClick.Target>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </uix:NClick>
+                                <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="1000,53" sap2010:WorkflowViewState.IdRef="Delay_5">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </Delay>
+                                <uix:NCheckState DisplayName="Check App State 'This app'" sap:VirtualizedContainerService.HintSize="1000,1406" sap2010:WorkflowViewState.IdRef="NCheckState_5" ScopeIdentifier="9ec755ac-87db-4239-acba-51837ed2cbeb" Version="V3">
+                                  <uix:NCheckState.IfExists>
+                                    <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,1187" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Click here'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NClick_10" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9ec755ac-87db-4239-acba-51837ed2cbeb" Version="V3">
+                                        <uix:NClick.Target>
+                                          <uix:TargetAnchorable BrowserURL="https://cmpg323-ecopowerlogistics.azurewebsites.net/Identity/Account/RegisterConfirmation?email=Test%2B38336529_2@gmail.com&amp;returnUrl=%2F" CvTextArea="1399, 218, 185, 20" CvTextArgument="Click here to confirm your" CvType="Text" DesignTimeRectangle="1399, 218, 185, 19" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Click here'" Guid="7f26df90-3be2-4f16-83cf-fe88defc857c" InformativeScreenshot="ca07dc916ca2a0c826066986fc7e639a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Register confirmation - EcoPower_Logistics' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V2" Visibility="Interactive" />
+                                        </uix:NClick.Target>
+                                      </uix:NClick>
+                                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Login'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NClick_11" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9ec755ac-87db-4239-acba-51837ed2cbeb" Version="V3">
+                                        <uix:NClick.Target>
+                                          <uix:TargetAnchorable BrowserURL="https://cmpg323-ecopowerlogistics.azurewebsites.net/Identity/Account/ConfirmEmail?userId=4d7f9a99-52d9-4d5a-8b63-11d629d2c7c0&amp;code=Q2ZESjhQeHJGQ0VXQjZ4RWdUamMxeVlwVEFUR1R4Y3NKSytSN1FDSGV6cDVjNWZZUzh5TEU2WGZQaUZsbE1wOUxVelZvYkt3RUxZWGNhc0lBK0xhQXY3bVpFaXhGWDhveXdyWmFPZEp3Z3d2WGJQNmNPbGx4Rm9uVUJvL0lKTFRvb0d2ZHZ3dGwwQ3hGK1B3Q3dEL1hTWHZVS0Ficzk0L09DMFcwWjBNaWJoM2Z4VWNXbTc3bXdabXdvU2hVcXlkTnVFNnVTWFFWVWZFKzgybUhyT0ZXUDI4UzJrV0FSamRDZURzbUFYeG9mUkdJUURLYXNFR3UwUGN5ckZkY1FoQ2Exbmh4Zz09&amp;returnUrl=%2F" CvTextArea="1568, 105, 40, 19" CvTextArgument="Login" CvType="Text" DesignTimeRectangle="1561, 93, 55, 40" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Login'" FullSelectorArgument="&lt;webctrl aaname='Login' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Login' tag='A' type='' class='nav-link text-dark' check:innerText='Login' /&gt;" Guid="ddf7c28d-be39-4682-8776-585009a7d548" InformativeScreenshot="bc0a4646a107cd94c8a27716136dccb3.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Confirm email - EcoPower_Logistics' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                                        </uix:NClick.Target>
+                                      </uix:NClick>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Email'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,219" sap2010:WorkflowViewState.IdRef="NTypeInto_8" ScopeIdentifier="9ec755ac-87db-4239-acba-51837ed2cbeb" Text="[RegisterEmail]" Version="V3">
+                                        <uix:NTypeInto.Target>
+                                          <uix:TargetAnchorable BrowserURL="https://cmpg323-ecopowerlogistics.azurewebsites.net/Identity/Account/Login" CvElementArea="318, 322, 419, 60" CvTextArea="332, 335, 33, 13" CvTextArgument="Email" CvType="InputBox" DesignTimeRectangle="320, 324, 416, 58" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT Input_Email'" FullSelectorArgument="&lt;webctrl id='Input_Email' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='Input_Email' tag='INPUT' type='email' class='form-control' aaname='Email' /&gt;" Guid="6f123d77-1307-42fb-b7d5-7aec9e24c970" InformativeScreenshot="24e50438d19cfbdde9d0cffef1e67d66.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Log in - EcoPower_Logistics' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                                            <uix:TargetAnchorable.Anchors>
+                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                <uix:Target CvTextArea="332, 335, 33, 13" CvTextArgument="Email" CvType="Text" DesignTimeRectangle="322, 317, 54, 49" ElementType="Text" FriendlyName="'Email'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='form-label' aaname='Email' check:innerText='Email' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADoAAAA1CAYAAAAQ7fj9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFMSURBVGhD7ZTBSgJRFIbvEweBDyDSOqSVhKuIIMJN+gBFi2pTBrVJaeFCkxBaTAWDceK/eeMkEmVS4+//wWHunbl35nxzzkywFUGibEiUDYmyIVE2oujT84vd9frWvunYxfUtZQRIQvBh9Gjj8Wu0ZySgkpBkJ6CazJVMBPTvKiBRNiTKhkTZkCgbc4seNlu2tl76FJ1ud3J1MZyendvO7p7leR4D43mf8StRJPJXSPSbLFw0JXTZvrLN6lZsaaxN5zEvVzZscD+c7Hhv0VmfAI7Yg73/KuqTg1SWZR8JpTkCYy+HvQiA9UfHJ/EI/HdZGNGvKuoT8mLAC0yDl1HbrscXtHSiWOfXTotiPqs7qET9GNBWFOd9W2NeuIr6dkMgyZ+Kpp9Vusf+QaNYFV02JMqGRNmQKBsSZUOibEiUDYmyIVE2JMqGRLkwewNxeiOjmw4d9QAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, CV" />
+                                              </scg:List>
+                                            </uix:TargetAnchorable.Anchors>
+                                          </uix:TargetAnchorable>
+                                        </uix:NTypeInto.Target>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,219" sap2010:WorkflowViewState.IdRef="NTypeInto_7" IsPassword="True" ScopeIdentifier="9ec755ac-87db-4239-acba-51837ed2cbeb" SecureText="[RegisterPasswordSecure]" Version="V3">
+                                        <uix:NTypeInto.Target>
+                                          <uix:TargetAnchorable BrowserURL="https://cmpg323-ecopowerlogistics.azurewebsites.net/Identity/Account/Login" CvElementArea="318, 381, 419, 60" CvTextArea="333, 393, 56, 13" CvTextArgument="Password" CvType="InputBox" DesignTimeRectangle="320, 382, 416, 58" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FriendlyName="'INPUT Input_Password'" FullSelectorArgument="&lt;webctrl id='Input_Password' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='Input_Password' tag='INPUT' type='password' class='form-control' aaname='Password' /&gt;" Guid="840a7d2b-42db-4b41-a606-0d58ba6423cd" InformativeScreenshot="0b86a12a4d0376536e917e1648a79162.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Log in - EcoPower_Logistics' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                                            <uix:TargetAnchorable.Anchors>
+                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                <uix:Target CvTextArea="333, 393, 56, 13" CvTextArgument="Password" CvType="Text" DesignTimeRectangle="322, 375, 78, 49" ElementType="Text" FriendlyName="'Password'" FullSelectorArgument="&lt;webctrl aaname='Password' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Password' tag='LABEL' type='' class='form-label' check:innerText='Password' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFIAAAA1CAYAAADS3bx5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJySURBVHhe7ZZNaxRBFEXnFwuCP0DErZ+rEF2JCCJu1JUomGShbsSFbkxw4UIziIyLUWGItJym7/BsOsbpXHEG7oFOV9erel11uqomk1dv3jXh9ESkiYg0EZEmItLE5PXb/ebo6Gf3GMYyef/hY/P5y9fuMYxl8u37j4ZVicyszPFM+INMViZCOTNzrX5FpOnK1jaRHxsT+ffHRP4hNxGRJiLSRESaiEgTEWkiIk1EpImINDFa5IOHj5ozZ88tr8tXrzfz+byLbibM6fmLl93TapxKZH0p5U2XuRYiF4tFc/fe/ebT4bSr2TzWQiQrcWv7ZiuSMqtT2/7W7TutaCB+/sLFZWz/4KCtJ5fq6Dubzdp+igPv5BL00TPt1J+rtiNGLj40saF3Kv7fRVKWMAaqwUoqz8SqHGKH02krl4+gY4E6ylWU8tTjg5jexcfRbtB7ND7iVSDU8YLa1Dmtgu3Hpg6qj6T3JygQcOnKtaUIwTOrhH6UyaPjA5nk4q78FcRoTLUMGkcVC0N5/hbbiqxooFW02tYYOQRytOU1QSTpuKA/9dxVpv9xUuijVU6siqx5K2slcmhix7WlnqvCJHUUAPFnO3vtnRiTZ1VSp5xD+dWO8fRFDo1RdWsjsv+1JYa2lHd299p6oI48TEiT6k+SO9v+8ZOn7TNxBG1t31i+gzYnnZFVJPDeWkebunNW5Z9sbeq1pZGoSWmCimkiCKi/5DVvf4VCXwJIxFCOIZFAHrWn/Kc5ncRokeF3ItJERJqISBMRaSIiTUSkiYg0EZEmItJERJqISBMRaSIiTUSkiYg0EZEmItJERJqISBMRaaFpfgHx/Vv8hPZ9VQAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, CV" />
+                                              </scg:List>
+                                            </uix:TargetAnchorable.Anchors>
+                                          </uix:TargetAnchorable>
+                                        </uix:NTypeInto.Target>
+                                      </uix:NTypeInto>
+                                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Log in'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NClick_12" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9ec755ac-87db-4239-acba-51837ed2cbeb" Version="V3">
+                                        <uix:NClick.Target>
+                                          <uix:TargetAnchorable BrowserURL="https://cmpg323-ecopowerlogistics.azurewebsites.net/Identity/Account/Login" CvElementArea="319, 470, 418, 51" CvTextArea="500, 486, 57, 22" CvTextArgument="Log in" CvType="Button" DesignTimeRectangle="320, 472, 416, 48" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Log in'" FullSelectorArgument="&lt;webctrl id='login-submit' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='login-submit' tag='BUTTON' type='submit' class='w-100 btn btn-lg btn-primary' aaname='Log in' check:innerText='Log in' /&gt;" Guid="5aa8dcc4-e959-4b4b-887b-bbd9003b50bc" InformativeScreenshot="13f08e939147eb34c9fe6e8b45782741.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Log in - EcoPower_Logistics' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                                        </uix:NClick.Target>
+                                      </uix:NClick>
+                                    </Sequence>
+                                  </uix:NCheckState.IfExists>
+                                  <uix:NCheckState.IfNotExists>
+                                    <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="496,324" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="434,86" sap2010:WorkflowViewState.IdRef="MessageBox_7" Text="[&quot;Register was invalid&quot;]" />
+                                      <Assign sap:VirtualizedContainerService.HintSize="434,83" sap2010:WorkflowViewState.IdRef="Assign_6">
+                                        <Assign.To>
+                                          <OutArgument x:TypeArguments="x:Boolean">[LoginSuccessful]</OutArgument>
+                                        </Assign.To>
+                                        <Assign.Value>
+                                          <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                                        </Assign.Value>
+                                      </Assign>
+                                    </Sequence>
+                                  </uix:NCheckState.IfNotExists>
+                                  <uix:NCheckState.Target>
+                                    <uix:TargetAnchorable BrowserURL="https://cmpg323-ecopowerlogistics.azurewebsites.net/Identity/Account/RegisterConfirmation?email=Test%2B38336529_2@gmail.com&amp;returnUrl=%2F" DesignTimeRectangle="320, 214, 1296, 48" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'This app'" FullSelectorArgument="&lt;webctrl tag='P' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='P' type='' class='' aaname='     This app does not currently have a real email sender registered, see  for how to configure a real email sender.     Normally this would be emailed:  ' check:innerText='This app does not currently have a real email sender registered, see these docs for how to' /&gt;" Guid="3e24dfa9-03e0-4b94-9cd0-097714771e55" InformativeScreenshot="cff8006c65686869199a125b38ee633a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Register confirmation - EcoPower_Logistics' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+                                  </uix:NCheckState.Target>
+                                </uix:NCheckState>
+                              </Sequence>
+                            </uix:NCheckState.IfExists>
+                            <uix:NCheckState.IfNotExists>
+                              <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,106" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                                <Sequence.Variables>
+                                  <Variable x:TypeArguments="x:String" Name="RegisterEmail" />
+                                  <Variable x:TypeArguments="x:String" Name="RegisterPassword" />
+                                  <Variable x:TypeArguments="ss:SecureString" Name="RegisterPasswordSecure" />
+                                </Sequence.Variables>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </Sequence>
+                            </uix:NCheckState.IfNotExists>
+                            <uix:NCheckState.Target>
+                              <uix:TargetAnchorable BrowserURL="https://cmpg323-ecopowerlogistics.azurewebsites.net/Identity/Account/Login" CvTextArea="352, 328, 150, 19" CvTextArgument="Invalid login attempt." CvType="Text" DesignTimeRectangle="352, 324, 384, 24" DesignTimeScaleFactor="1" ElementType="ListItem" FriendlyName="'Invalid login attempt.'" FullSelectorArgument="&lt;webctrl parentid='account' tag='LI' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='account' tag='LI' type='' class='' aaname='Invalid login attempt.' check:innerText='Invalid login attempt.' /&gt;" Guid="9629f2ab-7939-44e5-aa3e-6b2e3efc1cce" InformativeScreenshot="daee163a7e660d2a41eaaa446df7646d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Log in - EcoPower_Logistics' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                            </uix:NCheckState.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </uix:NCheckState>
+                        </Sequence>
+                      </uix:NCheckState.IfExists>
+                      <uix:NCheckState.IfNotExists>
+                        <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,83" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NCheckState DisplayName="Check App State 'Logout'" sap:VirtualizedContainerService.HintSize="1046,417" sap2010:WorkflowViewState.IdRef="NCheckState_7" ScopeIdentifier="9ec755ac-87db-4239-acba-51837ed2cbeb" Version="V3">
+                            <uix:NCheckState.IfExists>
+                              <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="496,198" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <Assign sap:VirtualizedContainerService.HintSize="434,83" sap2010:WorkflowViewState.IdRef="Assign_8">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:Boolean">[LoginSuccessful]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                              </Sequence>
+                            </uix:NCheckState.IfExists>
+                            <uix:NCheckState.IfNotExists>
+                              <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="496,198" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <Assign sap:VirtualizedContainerService.HintSize="434,83" sap2010:WorkflowViewState.IdRef="Assign_7">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:Boolean">[LoginSuccessful]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                              </Sequence>
+                            </uix:NCheckState.IfNotExists>
+                            <uix:NCheckState.Target>
+                              <uix:TargetAnchorable BrowserURL="https://cmpg323-ecopowerlogistics.azurewebsites.net/" CvTextArea="1548, 107, 51, 18" CvTextArgument="Logout" CvType="Text" DesignTimeRectangle="1539, 93, 68, 42" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Logout'" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='nav-link btn btn-link text-dark' aaname='Logout' check:innerText='Logout' /&gt;" Guid="5261aa94-967c-4aed-85d8-2537f5c18d2a" InformativeScreenshot="32e151917ccf80486784a155cb7bbdb8.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Home Page - EcoPower_Logistics' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                            </uix:NCheckState.Target>
+                          </uix:NCheckState>
+                        </Sequence>
+                      </uix:NCheckState.IfNotExists>
+                      <uix:NCheckState.Target>
+                        <uix:TargetAnchorable BrowserURL="https://cmpg323-ecopowerlogistics.azurewebsites.net/" CvTextArea="1560, 105, 40, 19" CvTextArgument="Login" CvType="Text" DesignTimeRectangle="1552, 93, 55, 40" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Login'" FullSelectorArgument="&lt;webctrl aaname='Login' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Login' tag='A' type='' class='nav-link text-dark' check:innerText='Login' /&gt;" Guid="ad9a6290-1e1d-430d-9041-cc304997ef5a" InformativeScreenshot="457462062a9c3ed04ab363a302f3ad33.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Home Page - EcoPower_Logistics' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                      </uix:NCheckState.Target>
+                    </uix:NCheckState>
+                  </Sequence>
+                </ActivityAction>
+              </uix:NApplicationCard.Body>
+              <uix:NApplicationCard.TargetApp>
+                <uix:TargetApp Area="-8, -8, 1936, 1048" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="40f4a00130478d61f634aadac7bbf34c.png" Selector="&lt;html app='chrome.exe' title='New Tab' /&gt;" Title="New Tab" Url="chrome://newtab/" />
+              </uix:NApplicationCard.TargetApp>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NApplicationCard>
+          </Sequence>
+        </ActivityAction>
+      </ui:RetryScope.ActivityBody>
+      <ui:RetryScope.Condition>
+        <ActivityFunc x:TypeArguments="x:Boolean">
+          <ui:CheckTrue DisplayName="Check True" ErrorMessage="Site could not be found" Expression="[SiteOpen]" sap:VirtualizedContainerService.HintSize="334,131" sap2010:WorkflowViewState.IdRef="CheckTrue_2" />
+        </ActivityFunc>
+      </ui:RetryScope.Condition>
+    </ui:RetryScope>
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="1154,86" sap2010:WorkflowViewState.IdRef="MessageBox_8" Text="[LoginSuccessful]" />
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1154,506" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="550,427" sap2010:WorkflowViewState.IdRef="Sequence_30">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <TryCatch DisplayName="Catch FIle Errors" sap:VirtualizedContainerService.HintSize="488,316" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+            <TryCatch.Try>
+              <Sequence DisplayName="Read Excel Sheet into Datatable" sap:VirtualizedContainerService.HintSize="450,83" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:SelectFile DisplayName="Browse For File" Filter="Excel|*.xlsx;*.xls;*.xlsm;*.xlsb" sap:VirtualizedContainerService.HintSize="602,140" sap2010:WorkflowViewState.IdRef="SelectFile_1" SelectedFile="[Excel_File]" />
+                <ueab:ExcelApplicationCard Password="{x:Null}" CreateNewFile="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="602,949" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ReadFormatting="Default" ResizeWindow="None" WorkbookPath="[Excel_File]">
+                  <ueab:ExcelApplicationCard.Body>
+                    <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                      </ActivityAction.Argument>
+                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="568,676" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Sequence sap:VirtualizedContainerService.HintSize="506,565" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                          <Sequence.Variables>
+                            <Variable x:TypeArguments="x:String" Name="TestDataTable" />
+                          </Sequence.Variables>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="444,243" sap2010:WorkflowViewState.IdRef="InputDialog_3" IsPassword="False" Label="Sheet Name" Title="Which Sheet Test?">
+                            <ui:InputDialog.Result>
+                              <OutArgument x:TypeArguments="x:String">[Sheet_Name]</OutArgument>
+                            </ui:InputDialog.Result>
+                          </ui:InputDialog>
+                          <ueab:ReadRangeX DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="444,171" sap2010:WorkflowViewState.IdRef="ReadRangeX_3" Range="[Excel.Sheet(Sheet_Name).Range(&quot;&quot;)]" SaveTo="[dtRange]" />
+                        </Sequence>
+                      </Sequence>
+                    </ActivityAction>
+                  </ueab:ExcelApplicationCard.Body>
+                </ueab:ExcelApplicationCard>
+              </Sequence>
+            </TryCatch.Try>
+            <TryCatch.Catches>
+              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="454,22" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ActivityAction x:TypeArguments="s:Exception">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                  </ActivityAction.Argument>
+                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,86" sap2010:WorkflowViewState.IdRef="MessageBox_5" Text="[&quot;File was not found/No file was selected&quot;]" />
+                </ActivityAction>
+              </Catch>
+            </TryCatch.Catches>
+          </TryCatch>
+        </Sequence>
+      </ui:CommentOut.Body>
+    </ui:CommentOut>
   </Sequence>
 </Activity>

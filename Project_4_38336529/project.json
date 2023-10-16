@@ -1,11 +1,10 @@
 {
-  "name": "Project_4_38336529",
+  "name": "Connected_Office_Web_Application_User_Acceptance_Testing",
   "projectId": "089eba75-ba85-4ec5-ad98-a52eedf647d4",
-  "description": "Project 4 UIPath Test Automation",
+  "description": "Project 4 UIPath Test Automation (38336529)",
   "main": "Main.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.22.1-preview]",
-    "UiPath.Mail.Activities": "[1.20.3]",
     "UiPath.System.Activities": "[23.10.0-preview]",
     "UiPath.Testing.Activities": "[23.10.0-preview]",
     "UiPath.UIAutomation.Activities": "[23.10.0-preview]"
