@@ -12,6 +12,11 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "CellToWrite&Sequence_58",
+        "FoundText&Sequence_59",
+        "CellToWrite&Sequence_49",
+        "ItemSuccessful&Sequence_1",
+        "FoundText&Sequence_54",
         "List_OfSheets&Sequence_1",
         "SelectedFile&Sequence_1",
         "FileChosen&Sequence_1",
