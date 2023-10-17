@@ -12,8 +12,18 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "CellValue&Sequence_2",
-        "Excel_File&Sequence_1"
+        "List_OfSheets&Sequence_1",
+        "SelectedFile&Sequence_1",
+        "FileChosen&Sequence_1",
+        "LoginSuccessful&Sequence_1",
+        "SiteOpen&Sequence_1",
+        "RegisterPasswordSecure&Sequence_18",
+        "RegisterPassword&Sequence_18",
+        "RegisterEmail&Sequence_18",
+        "RegisterPasswordSecure&Sequence_17",
+        "RegisterPassword&Sequence_17",
+        "RegisterEmail&Sequence_17",
+        "dtRange&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],

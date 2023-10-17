@@ -14,13 +14,13 @@ using UiPath.UIAutomationNext.API.Models;
 using UiPath.UIAutomationNext.Enums;
 using UiPath.CodedWorkflows.DescriptorIntegration;
 
-namespace Project_4_38336529
+namespace Connected_Office_Web_Application_User_Acceptance_Testing
 {
     public partial class CodedWorkflow : CodedWorkflowBase
     {
         public CodedWorkflow()
         {
-            _ = new System.Type[]{typeof(UiPath.UIAutomationNext.API.Contracts.IUiAutomationAppService), typeof(UiPath.Testing.API.ITestingService), typeof(UiPath.Core.Activities.API.ISystemService)};
+            _ = new System.Type[]{typeof(UiPath.Core.Activities.API.ISystemService), typeof(UiPath.Testing.API.ITestingService), typeof(UiPath.UIAutomationNext.API.Contracts.IUiAutomationAppService)};
         }
 
         protected UiPath.Core.Activities.API.ISystemService system { get => serviceContainer.Resolve<UiPath.Core.Activities.API.ISystemService>(); }
@@ -31,14 +31,14 @@ namespace Project_4_38336529
     }
 }
 
-namespace Project_4_38336529.ObjectRepository
+namespace Connected_Office_Web_Application_User_Acceptance_Testing.ObjectRepository
 {
     public static class Descriptors
     {
     }
 }
 
-namespace Project_4_38336529._Implementation
+namespace Connected_Office_Web_Application_User_Acceptance_Testing._Implementation
 {
     internal class ScreenDescriptorDefinition : IScreenDescriptorDefinition
     {
