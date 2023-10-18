@@ -12,7 +12,12 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "RecordList&Sequence_170",
+        "RecordList&Sequence_200",
+        "FormatedDateValidate&Sequence_124",
+        "RecordYear&Sequence_70",
+        "RecordMonth&Sequence_70",
+        "RecordDate&Sequence_70",
+        "RecordDateArr&Sequence_70",
         "FoundUnits&Sequence_126",
         "FoundDescrip&Sequence_126",
         "CellToWrite&Sequence_125",
