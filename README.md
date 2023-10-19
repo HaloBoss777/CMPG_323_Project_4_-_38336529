@@ -11,7 +11,7 @@
 <h2>Project Manual</h2>
 <p3>This test project is only made to be used on the website <a href="https://cmpg323-ecopowerlogistics.azurewebsites.net/">https://cmpg323-ecopowerlogistics.azurewebsites.net/</a> any other use of the project will result in unintended behavior</p3>
 <p>The test can be run as a attended and unattended machine but there will be input required for the test to start</p>
-<p>When the test is run through UIpath or UIpath assistant it will open new browser of chrome type and the user will need to input a email and a password to login or register on the site</p>
+<p>When the test is run through UIpath and UIpath assistant it will open new browser of chrome type and the user will need to input a email and a password to login or register on the site if you are logged in the process will just start the test</p>
 <p>Login:</p>
 <img src="/Images/Login.png" alt="Login"></img>
 <p>Register</p>
@@ -39,7 +39,8 @@
 <p>Step 4: The record will be deleted after all the previos steps are completed</p>
 <img src="/Images/Delete.png" alt="Delete"></img>
 
-<p>After all the steps, the record is saved as TRUE if the test completed or FALSE if a error was encountered after steps repeat again until all records are tested in the current sheet</p>
+<p>After all the steps, the record is saved as TRUE if the test completed or FALSE if a error was encountered, after the steps repeat again until all records are tested in the current sheet</p>
+
 <p>After a sheet is tested the test moves to the next table(Sheet)</p>
 
 <p>After each sheet is tested and excel file is updated for each record the test is complete</p>
